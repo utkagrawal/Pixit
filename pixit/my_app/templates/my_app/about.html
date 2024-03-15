@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href={% static "my_app/styles.css"%}>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: yellow;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: yellow;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section:nth-child(odd) .text {
+      order: 1;
+    }
+
+    .section:nth-child(odd) img {
+      margin-right: 20px;
+    }
+
+    .section:nth-child(even) img {
+      margin-left: 20px;
+    }
+
+    .section img {
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(244, 178, 72, 0.5);
+    }
+
+    .text {
+      flex: 1;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+    <section id="header">
+        <a href={% url 'my_app:homepage' %}><img src= {% static "my_app/logop.png"%} class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href={% url 'my_app:homepage' %}>Home</a></li>
+                <li><a href={% url 'my_app:sample' %}>Examples</a></li>
+                <li><a class ="active" href={% url 'my_app:about' %}>About</a></li>
+
+            </ul>
+        </div>
+    </section>
+
+  <div class="container">
+    <section class="section" id="section1">
+      <img src={% static "my_app/ghost.jpg"%} alt="About Us Image" style="height: 500px; width: auto;">
+      <div class="text">
+        <h1 style="color: wheat; font-weight: bold;
+        font-style: italic; text-decoration: underline;">The Story Behind Pixit</h1>
+        <p style="
+        color: tan;
+    ">As an artist, I struggled to find the pixel art I needed. While conventional images were easy to find, the specific pixelated designs I wanted were hard to come by. This led me to develop an application that seamlessly transforms standard images into pixel art. It was a creative solution to a common problem in the artistic community, simplifying the process of accessing and manipulating visual content.</p>      </div>
+    </section>
+    
+    <section class="section" id="section2">
+      <div class="text" style="color: tan; font-size: large;">
+        <h1 style="color: wheat; font-weight: bold;
+        font-style: italic; text-decoration: underline;">Technologies Utilized:</h1>
+        <p style="color: tan;"><ul style="color: tan;">
+           <li>Python programming language</li> 
+           <li>OpenCV library</li> 
+            <li>Django web framework</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Bootstrap framework</li>
+            <li>JavaScript</li>
+            <li>Procreate (for design and artwork)</li>
+            <li>Jinja</li>
+            <li>Linode Hosting Platform</li>
+            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
+        </ul>
+            This comprehensive blend of technologies and tools enabled the development of a dynamic and visually appealing website, seamlessly integrating advanced functionalities for pixel art transformation.</p>
+      </div>
+      <img src={% static "my_app/fullstack.jpeg"%} alt="Our Mission Image" style="width: 800px; height: auto;">
+    </section>
+
+    <section class="section" id="section3">
+      
+      <div class="text">
+        <h1 style="color: wheat; font-weight: bold;
+        font-style: italic; text-decoration: underline; text-align: center;">Get In Touch</h1>
+        <p style="color: tan; font-size: large; text-align: center;">If you have any inquiries,suggestions, feedback, or collaboration opportunities, feel free to reach out. I'm always eager to connect with fellow enthusiasts and professionals.
+
+            You can contact me via email at <a href="https://mail.google.com/mail/?view=cm&fs=1&to=agrawalutk.26@gmail.com">agrawalutk.26@gmail.com</a>
+            or through the contact form on this website. Looking forward to hearing from you!</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
